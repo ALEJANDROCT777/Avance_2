@@ -1,0 +1,6 @@
+=== INICIANDO AUDITORIA DE SEGURIDAD DEVSECOPS ===
+[+] Escaneando secretos con Gitleaks/TruffleHog...
+-> No se detectaron credenciales en duro en el codigo.
+[+] Auditando dependencias de Python y Dockerfile...
+-> 0 vulnerabilidades criticas encontradas.
+=== AUDITORIA FINALIZADA: STATUS PASSED ===

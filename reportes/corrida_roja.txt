@@ -1,0 +1,13 @@
+=== INICIANDO PIPELINE DE SEGURIDAD Y AUDITORÍA ===
+[1/3] Deteccion de Secretos...
+grep: ../app/: No such file or directory
+grep: ../infra/: No such file or directory
+✅ PASO: Cero credenciales expuestas.
+[2/3] Auditando Dockerfile...
+grep: ../app/Dockerfile: No such file or directory
+grep: ../app/Dockerfile: No such file or directory
+❌ FALLO: El contenedor se ejecuta como root.
+[3/3] Verificando proteccion de variables...
+✅ PASO: El archivo .env esta protegido.
+==================================================
+🔴 VEREDICTO FINAL: BLOQUEAR DESPLIEGUE (FAILED)

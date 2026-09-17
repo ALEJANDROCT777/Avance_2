@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_HOST=cache_redis
+      - REDIS_PORT=6379
+      - AWS_S3_BUCKET=reto-red-social-s3-ale-torres-2026
+    depends_on:
+      - cache_redis
+    restart: always
+
+  cache_redis:
+    image: redis:7.2-alpine
+    container_name: cache_redis
+    ports:
+      - "6379:6379"
+    restart: always
